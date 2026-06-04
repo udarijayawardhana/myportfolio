@@ -1,0 +1,15 @@
+/* Barrel file — imports all style modules in order */
+@import './base.css';
+@import './cursor.css';
+@import './nav.css';
+@import './hero.css';
+@import './about.css';
+@import './skills.css';
+@import './projects.css';
+@import './experience.css';
+@import './achievements.css';
+@import './education.css';
+@import './contact.css';
+@import './footer.css';
+@import './reveal.css';
+@import './responsive.css';

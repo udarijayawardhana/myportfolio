@@ -1,0 +1,13 @@
+/* ============== EXPERIENCE ============== */
+.timeline{position:relative;padding-left:48px}
+.timeline svg.line{position:absolute;left:14px;top:0;height:100%;width:2px;overflow:visible}
+.timeline svg.line path{stroke:var(--accent);stroke-width:2;fill:none;stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
+.tl-item{position:relative;padding-bottom:var(--s6)}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-41px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 0 4px var(--bg)}
+.tl-meta{font-size:11px;letter-spacing:.2em;color:var(--fg-mute);text-transform:uppercase;margin-bottom:6px}
+.tl-role{font-family:var(--display);font-size:24px;letter-spacing:-.02em}
+.tl-org{color:var(--accent);font-size:13px;margin:6px 0 var(--s3)}
+.tl-list{list-style:none;padding:0;margin:0;color:var(--fg-dim);font-size:13.5px}
+.tl-list li{position:relative;padding-left:18px;margin-bottom:6px}
+.tl-list li::before{content:"→";position:absolute;left:0;color:var(--accent)}

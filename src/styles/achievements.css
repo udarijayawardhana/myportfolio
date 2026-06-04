@@ -1,0 +1,19 @@
+/* ============== ACHIEVEMENTS ============== */
+.hi-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-bottom:var(--s4)}
+.hi-card{
+  position:relative;padding:var(--s5);border-radius:var(--r2);
+  background:linear-gradient(180deg,var(--surface),var(--surface-2));
+  border:1px solid var(--line);overflow:hidden;
+}
+.hi-card::before{content:"";position:absolute;inset:0;border-radius:var(--r2);padding:1px;background:linear-gradient(135deg,var(--accent),transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.hi-num{font-family:var(--display);font-size:64px;font-weight:800;letter-spacing:-.03em;color:var(--fg);line-height:1}
+.hi-num span{color:var(--accent)}
+.hi-cap{font-family:var(--display);font-size:22px;margin-top:var(--s3)}
+.hi-sub{color:var(--fg-dim);font-size:13px;margin-top:8px;max-width:46ch}
+.hi-link{display:inline-flex;align-items:center;gap:6px;margin-top:var(--s3);font-size:12px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3)}
+.cert{padding:var(--s4);border:1px solid var(--line);border-radius:var(--r2);background:var(--surface);transition:.3s}
+.cert:hover{border-color:var(--accent);transform:translateY(-2px)}
+.cert .ico{width:32px;height:32px;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:var(--s3)}
+.cert h4{font-family:var(--display);font-size:16px;margin-bottom:4px}
+.cert p{font-size:12px;color:var(--fg-mute)}

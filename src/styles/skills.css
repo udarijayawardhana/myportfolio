@@ -1,0 +1,16 @@
+/* ============== SKILLS ============== */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s5) var(--s6)}
+.skill-group h3{font-family:var(--display);font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.2em;margin-bottom:var(--s4)}
+.skill{margin-bottom:var(--s3)}
+.skill-row{display:flex;justify-content:space-between;font-size:13px;color:var(--fg-dim);margin-bottom:6px}
+.skill-row b{color:var(--fg);font-weight:500}
+.bar{height:2px;background:var(--line);overflow:hidden;border-radius:2px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#ffaa70);transition:width 1.2s var(--ease-expo)}
+.skill.in .bar i{width:var(--w,80%)}
+
+.marquee{margin-top:var(--s6);overflow:hidden;border-block:1px solid var(--line);padding:var(--s4) 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;gap:48px;white-space:nowrap;animation:marquee 38s linear infinite;font-family:var(--display);font-size:28px;letter-spacing:-.02em;color:var(--fg-mute)}
+.marquee-track span{display:inline-flex;align-items:center;gap:48px}
+.marquee-track span::after{content:"◆";color:var(--accent);font-size:10px}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(-50%)}}

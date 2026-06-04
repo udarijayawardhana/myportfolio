@@ -1,0 +1,35 @@
+/* ============== NAV ============== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  transition:background .3s var(--ease),border-color .3s var(--ease),backdrop-filter .3s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{background:rgba(8,8,8,.72);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em;display:inline-flex;align-items:center;gap:8px}
+.logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px var(--accent-glow)}
+.nav-links{display:flex;gap:var(--s5);align-items:center}
+.nav-links a{font-size:13px;color:var(--fg-dim);position:relative;padding:6px 0;transition:color .2s var(--ease)}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav-links a:hover,.nav-links a.active{color:var(--fg)}
+.nav-links a.active::after,.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-strong);padding:8px 14px;border-radius:999px;font-size:12px;color:var(--fg);transition:border-color .2s,background .2s}
+.nav-cta:hover{border-color:var(--accent);background:var(--accent-soft)}
+.nav-burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px}
+.nav-burger span{display:block;width:18px;height:1px;background:var(--fg);position:relative;transition:transform .3s var(--ease),opacity .2s}
+.nav-burger span::before,.nav-burger span::after{content:"";position:absolute;left:0;width:18px;height:1px;background:var(--fg);transition:transform .3s var(--ease)}
+.nav-burger span::before{top:-6px}.nav-burger span::after{top:6px}
+body.menu-open .nav-burger span{background:transparent}
+body.menu-open .nav-burger span::before{transform:translateY(6px) rotate(45deg)}
+body.menu-open .nav-burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+.menu{
+  position:fixed;inset:0;z-index:40;background:var(--bg);
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+  padding:0 var(--pad);
+  transform:translateY(-100%);transition:transform .5s var(--ease-expo);
+}
+body.menu-open .menu{transform:translateY(0)}
+.menu a{font-family:var(--display);font-weight:700;font-size:clamp(36px,8vw,64px);color:var(--fg);padding:8px 0;opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease);transition-delay:calc(var(--i,0) * 60ms)}
+body.menu-open .menu a{opacity:1;transform:none}
+.menu a:hover{color:var(--accent)}

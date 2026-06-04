@@ -1,0 +1,63 @@
+/* ============== TABLET ============== */
+@media (max-width: 980px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-art{height:280px;order:-1}
+  .geo{width:200px;height:200px}
+  .hero h1{font-size:clamp(42px,9vw,80px)}
+  .hero h1 .surname{font-size:clamp(26px,5vw,56px)}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr;gap:var(--s5)}
+  .bento{grid-template-columns:1fr;grid-auto-rows:auto}
+  .card,.card.feat{grid-column:auto;grid-row:auto;min-height:200px}
+  .hi-grid,.cert-grid,.edu-grid,.social-row,.form-row{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .nav-burger{display:inline-flex}
+  .stats{grid-template-columns:1fr 1fr}
+}
+
+/* ============== MOBILE ============== */
+@media (max-width:640px){
+  .hero{padding-top:72px;min-height:100svh}
+  .hero-inner{gap:var(--s4)}
+  .hero-art{height:200px}
+  .geo{width:150px;height:150px}
+  .hero h1{
+    font-size:clamp(36px,11vw,56px);
+    line-height:.92;
+    letter-spacing:-.03em;
+  }
+  .hero h1 .surname{font-size:clamp(22px,6.5vw,38px)}
+  .hero-eyebrow{font-size:9px;padding:6px 10px}
+  .role-line{font-size:clamp(13px,3.5vw,16px)}
+  .tagline{font-size:14px}
+  .cta-row{gap:var(--s2)}
+  .btn{padding:12px 18px;font-size:12px}
+  .section-title{font-size:clamp(28px,7vw,48px)}
+  .section-eyebrow{font-size:11px}
+  .tl-item{padding-left:var(--s4)}
+  .contact-grid{gap:var(--s4)}
+  .contact-rows{gap:var(--s3)}
+  .social-row{gap:var(--s3)}
+  .scroll-ind{bottom:16px}
+  .scroll-ind .mouse{width:18px;height:30px}
+  .scroll-ind span{font-size:9px;letter-spacing:.2em}
+}
+
+/* ============== SMALL MOBILE ============== */
+@media (max-width:400px){
+  .hero h1{
+    font-size:clamp(30px,10vw,44px);
+    line-height:.94;
+  }
+  .hero h1 .surname{font-size:clamp(18px,5.8vw,28px)}
+  .cert-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stats .stat{padding:var(--s3)}
+  .container{padding:0 16px}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
