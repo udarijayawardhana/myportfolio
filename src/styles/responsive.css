@@ -18,10 +18,10 @@
 
 /* ============== MOBILE ============== */
 @media (max-width:640px){
-  .hero{padding-top:72px;min-height:100svh}
-  .hero-inner{gap:var(--s4)}
-  .hero-art{height:200px}
-  .geo{width:150px;height:150px}
+  .hero{padding-top:72px;padding-bottom:88px;min-height:100svh;align-items:flex-start}
+  .hero-inner{gap:var(--s3)}
+  .hero-art{height:180px}
+  .geo{width:140px;height:140px}
   .hero h1{
     font-size:clamp(36px,11vw,56px);
     line-height:.92;
@@ -46,6 +46,10 @@
 
 /* ============== SMALL MOBILE ============== */
 @media (max-width:400px){
+  .hero{padding-bottom:72px}
+  .hero-art{height:150px}
+  .geo{width:120px;height:120px}
+  .scroll-ind{display:none}
   .hero h1{
     font-size:clamp(30px,10vw,44px);
     line-height:.94;
