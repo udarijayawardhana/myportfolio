@@ -257,7 +257,7 @@ export const data = {
       { name: 'LinkedIn', sub: '/in/udari-jayawardhana', href: 'https://www.linkedin.com/in/udari-jayawardhana-405141288' },
       { name: 'GitHub', sub: '@udarijayawardhana', href: 'https://github.com/udarijayawardhana' },
     ],
-    formAction: 'https://formspree.io/f/YOUR_FORM_ID',
+    formAction: 'https://formspree.io/f/mojzzqnk',
   },
   footer: {
     name: 'Udari Jayawardhana',
